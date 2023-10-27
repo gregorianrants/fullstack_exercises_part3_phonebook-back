@@ -1,0 +1,14 @@
+DELETE  https://fs-gregorian-phonebook.fly.dev/api/persons/653aabcb4733df79b3e1aefb
+Content-Type: application/json
+###
+
+
+# non existant id
+DELETE  https://fs-gregorian-phonebook.fly.dev/api/persons/653404d2948b4706b923694e
+Content-Type: application/json
+###
+
+#malformed id
+DELETE  https://fs-gregorian-phonebook.fly.dev/api/persons/653404d2948b4706b923694
+Content-Type: application/json
+###

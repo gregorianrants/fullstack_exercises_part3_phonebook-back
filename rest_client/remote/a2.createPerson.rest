@@ -1,0 +1,77 @@
+#create person
+POST https://fs-gregorian-phonebook.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "name": "bart simpleson",
+    "number": "123545645465456"
+}
+###
+
+#create person name prop missing
+POST https://fs-gregorian-phonebook.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "number": "825647"
+}
+###
+
+#create person name prop has no value
+POST https://fs-gregorian-phonebook.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "name": "",
+    "number": "825647"
+}
+###
+
+#create person number prop missing
+POST https://fs-gregorian-phonebook.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "name": "gandalf the gray"
+}
+###
+
+#create person number prop has no value
+POST https://fs-gregorian-phonebook.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "name": "gandalf the gray",
+    "number": ""
+}
+###
+
+#create person number and name prop missing
+POST https://fs-gregorian-phonebook.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    
+}
+###
+
+
+#create person name already exists
+POST https://fs-gregorian-phonebook.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "name": "bart simpleson",
+    "number": "825647"
+}
+###
+
+#name to short
+POST https://fs-gregorian-phonebook.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "name": "mi",
+    "number": "825647"
+}
+###

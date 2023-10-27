@@ -1,0 +1,41 @@
+#the prefix on these rest files e.g the a1 in a1.persons.rest is just so i can have them listed in vs code
+#explorer in the order i want to run them.
+
+#fetch all persons
+GET http://localhost:3001/api/persons
+Content-Type: application/json
+###
+
+#this is here for conveniance for creating person for testing other routes
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "jaba the shed",
+    "number": "555555"
+}
+###
+
+
+#get info page
+GET http://localhost:3001/info
+Content-Type: text/html; charset=utf-8
+###
+
+
+#non existant route
+POST http://localhost:3001/api/person
+Content-Type: application/json
+
+{
+    "name": "mithras",
+    "number": "825647"
+}
+###
+
+
+
+
+
+
+

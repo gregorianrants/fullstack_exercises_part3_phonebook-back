@@ -1,0 +1,145 @@
+#create person
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "homeragiihafdf",
+    "number": "123-45678"
+}
+###
+
+#create person name prop missing
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "number": "825647"
+}
+###
+
+#create person name prop has no value
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "",
+    "number": "825647"
+}
+###
+
+#create person number prop missing
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "gandalf the gray"
+}
+###
+
+#create person number prop has no value
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "gandalf the gray",
+    "number": ""
+}
+###
+
+#create person number and name prop missing
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    
+}
+###
+
+
+#create person name already exists
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "mithras newnique",
+    "number": "825647"
+}
+###
+
+#name to short
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "mi",
+    "number": "825647"
+}
+###
+
+#number validation
+
+#passing numbers
+
+#has 8 digits and 2 digits before hyphen
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "sam",
+    "number": "12-345678"
+}
+###
+
+#has more than 8 digits and 2 digits before hyphen
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "sam g",
+    "number": "12-345678"
+}
+###
+
+#has 8 digits and 3 digits before hyphen
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "sam ga",
+    "number": "123-45678"
+}
+###
+
+#failing numbers
+
+#has 8 digits and less than 2 digits before hyphen
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "sam gam",
+    "number": "1-2345678"
+}
+###
+
+#has 8 digits and more than 3 digits before hyphen
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "sam gamgee",
+    "number": "1-2345678"
+}
+###
+
+#has less than 8 digits
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "that s a lot of tests",
+    "number": "123-234"
+}
+###
+
+

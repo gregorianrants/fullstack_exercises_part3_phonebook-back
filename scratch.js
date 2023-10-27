@@ -1,0 +1,1 @@
+console.log(String(2) === '2')

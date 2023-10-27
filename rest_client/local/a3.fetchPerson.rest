@@ -1,0 +1,16 @@
+#fetch one person with existant id
+#fetch with malformed
+GET http://localhost:3001/api/persons/653404c4948b4706b923694c
+Content-Type: application/json
+###
+
+#fetch with non existant
+#to make a valid id replace some numbers in an id that is in the #database but dont replace the letters.
+GET http://localhost:3001/api/persons/652404c4941b4706b923694c
+Content-Type: application/json
+###
+
+#fetch with malformed
+GET http://localhost:3001/api/persons/653404c4948b4706b923694
+Content-Type: application/json
+###

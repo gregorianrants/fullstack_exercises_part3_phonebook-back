@@ -1,0 +1,29 @@
+#update person
+PUT https://fs-gregorian-phonebook.fly.dev/api/persons/653aabba4733df79b3e1aef8
+Content-Type: application/json
+
+{
+    "name": "lisa simpson",
+    "number": "1234"
+}
+###
+
+
+#update person non existant id
+PUT https://fs-gregorian-phonebook.fly.dev/api/persons/6534115bb2ee810bd7ccb458
+Content-Type: application/json
+
+{
+    "name": "captain update",
+    "number": "1"
+}
+###
+
+#malformed id
+PUT https://fs-gregorian-phonebook.fly.dev/api/persons/6534115bb2ee810bd7ccb
+Content-Type: application/json
+
+{
+    "name": "captain update",
+    "number": "1"
+}

@@ -1,0 +1,29 @@
+#update person
+PUT http://localhost:3001/api/persons/6534115bb2ee810bd7ccb455
+Content-Type: application/json
+
+{
+    "name": "captain up",
+    "number": "1234"
+}
+###
+
+
+#update person non existant id
+PUT http://localhost:3001/api/persons/6534115bb2ee810bd7ccb458
+Content-Type: application/json
+
+{
+    "name": "captain update",
+    "number": "1"
+}
+###
+
+#malformed id
+PUT http://localhost:3001/api/persons/6534115bb2ee810bd7ccb
+Content-Type: application/json
+
+{
+    "name": "captain update",
+    "number": "1"
+}

@@ -1,0 +1,15 @@
+DELETE  http://localhost:3001/api/persons/6534d047406000e4b2961d91
+Content-Type: application/json
+###
+
+
+# non existant id
+DELETE  http://localhost:3001/api/persons/653404d2948b4706b923694e
+Content-Type: application/json
+###
+
+
+#malformed id
+DELETE  http://localhost:3001/api/persons/653404d2948b4706b923694
+Content-Type: application/json
+###

@@ -1,0 +1,36 @@
+#the prefix on these rest files e.g the a1 in a1.persons.rest is just so i can have them listed in vs code
+#explorer in the order i want to run them.
+
+#fetch all persons
+GET https://fs-gregorian-phonebook.fly.dev/api/persons
+Content-Type: application/json
+###
+
+#this is here for conveniance for creating person for testing other routes
+POST https://fs-gregorian-phonebook.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "name": "montgomery burns",
+    "number": "555555"
+}
+###
+
+
+#get info page
+GET https://fs-gregorian-phonebook.fly.dev/info
+Content-Type: text/html; charset=utf-8
+###
+
+
+#non existant route
+POST https://fs-gregorian-phonebook.fly.dev/api/person
+Content-Type: application/json
+
+{
+    "name": "mithras",
+    "number": "825647"
+}
+###
+
+
